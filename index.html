@@ -3,107 +3,119 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Facebook - Đăng nhập hoặc đăng kí</title>
+  <title>Facebook - Đăng nhập hoặc đăng ký</title>
   
-  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
 </head>
-<body>
-    <div class="container">
-        <div>
-            <!-- left col-->
-            <div class="left" aria-hidden="false">
-                <div class="left__logo" aria-hidden="true">
-                    <img src="https://static.xx.fbcdn.net/rsrc.php/y1/r/4lCu2zih0ca.svg" alt="Facebook logo">
-                </div>  
 
-                <p class="left__description">
-                    Facebook giúp bạn kết nối và chia sẻ với mọi người trong cuộc sống của bạn.
-                </p>
+<body class="font-['Inter'] bg-[#f2f4f7] text-[#1c1e21]">
+  <main class="min-h-[80vh] flex items-center justify-center p-4 md:p-6 lg:p-8">
+    <div class="flex flex-col lg:flex-row lg:w-[980px] lg:items-start lg:justify-between w-full gap-8 md:gap-10 items-center">
+      
+      <!-- Left col -->
+      <div class="flex flex-col gap-4 mt-5 items-center text-center sm:gap-5 md:gap-6 lg:flex-[1.2] lg:items-start lg:text-left lg:mt-[60px]">
+        <div class="flex items-center font-bold text-3xl text-[#1877f2] tracking-[0.2px]">
+          <img class="h-20 sm:h-24 md:h-[106px] lg:!-m-[26px] sm:m-0" src="https://static.xx.fbcdn.net/rsrc.php/y1/r/4lCu2zih0ca.svg" alt="Facebook logo">
+        </div>  
+        <p class="text-lg leading-6 sm:text-xl sm:leading-7 md:text-2xl md:leading-8 font-normal w-full md:w-[500px]">
+          Facebook giúp bạn kết nối và chia sẻ với mọi người trong cuộc sống của bạn.
+        </p>
+      </div>
+
+      <!-- Right col -->
+      <div class="w-full max-w-[420px] flex flex-col gap-4 md:gap-5 lg:flex-shrink-0 lg:flex-grow-0 lg:basis-[380px]">
+        <div class="w-full bg-white rounded-xl p-4 md:p-5 shadow-[0_6px_20px_rgba(0,0,0,0.08)]" role="region" aria-label="Đăng nhập">
+          <form class="flex flex-col gap-3" action="#" method="post" novalidate>
+            <input id="email" name="email"
+              class="w-full px-3 py-3 rounded-lg border border-[#dddfe2] text-[15px] outline-none bg-transparent
+                     focus:border-[#1877f2] focus:shadow-[0_0_0_3px_rgba(24,119,242,0.08)]"
+              placeholder="Email hoặc số điện thoại" type="text" autocomplete="username" required>
+
+            <input id="password" name="password"
+              class="w-full px-3 py-3 rounded-lg border border-[#dddfe2] text-[15px] outline-none bg-transparent
+                     focus:border-[#1877f2] focus:shadow-[0_0_0_3px_rgba(24,119,242,0.08)]"
+              placeholder="Mật khẩu" type="password" autocomplete="current-password" required>
+
+            <button type="submit"
+              class="w-full px-3 py-3 rounded-lg bg-[#1877f2] text-white font-semibold text-base cursor-pointer active:translate-y-[1px]">
+              Đăng nhập
+            </button>
+
+            <a href="#" class="text-[#0866ff] no-underline font-medium text-center text-base mt-1 hover:underline">
+              Quên mật khẩu?
+            </a>
+
+            <div class="border-b border-[#dadde1] my-2"></div>
+
+            <div class="w-full flex justify-center">
+              <button type="button"
+                class="px-5 rounded-lg bg-[#42b72a] text-white text-[15px] sm:text-[16px] md:text-[17px] leading-[44px] md:leading-[48px] font-bold cursor-pointer shadow-[0_4px_10px_rgba(66,183,42,0.15)]
+                       hover:bg-[#36a420]">
+                Tạo tài khoản mới
+              </button>
             </div>
-
-            <!-- right col-->
-            <div class="right" aria-hidden="false">
-                <div class="login-card" role="region" aria-label="Đăng nhập">
-                    <form action="#" method="post" novalidate>
-                        <label for="email" class="sr-only" style="display:none">Email hoặc số điện thoại</label>
-                        <input id="email" name="email" class="login-card__input" placeholder="Email hoặc số điện thoại" type="text" autocomplete="username" required>
-
-                        <label for="password" class="sr-only" style="display:none">Mật khẩu</label>
-                        <input id="password" name="password" class="login-card__input" placeholder="Mật khẩu" type="password" autocomplete="current-password" required>
-
-                        <button type="submit" class="login-card__button" aria-label="Đăng nhập">Đăng nhập</button>
-
-                        <a href="#" class="login-card__link">Quên mật khẩu?</a>
-
-                        <div class="login-card__divider"></div>
-
-                        <div class="login-card__create-box">
-                            <button type="button" class="login-card__create-btn" aria-label="Tạo tài khoản mới">Tạo tài khoản mới</button>
-                        </div>
-
-                    </form>
-                </div>
-                <div class="message">
-                    <a href="" class="message__link">Tạo trang</a>
-                    dành cho người nổi tiếng, thương hiệu hoặc doanh nghiệp.
-                </div>
-            </div>
+          </form>
         </div>
+        <div class="text-sm font-normal text-center">
+          <a href="#" class="font-semibold no-underline hover:underline">Tạo trang</a>
+          dành cho người nổi tiếng, thương hiệu hoặc doanh nghiệp.
+        </div>
+      </div>
     </div>
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer__lang-links">
-            <a href="#">Tiếng Việt</a>
-            <a href="#">English (UK)</a>
-            <a href="#">中文(台灣)</a>
-            <a href="#">한국어</a>
-            <a href="#">日本語</a>
-            <a href="#">Français (France)</a>
-            <a href="#">ภาษาไทย</a>
-            <a href="#">Español</a>
-            <a href="#">Português (Brasil)</a>
-            <a href="#">Deutsch</a>
-            <a href="#">Italiano</a>
-            <button class="footer__btn">+</button>
-        </div>
+  </main>
 
-        <div class="footer__divider"></div>
+  <!-- Footer -->
+  <footer class="w-full max-w-[980px] mx-auto my-5 px-5 py-2 text-xs text-[#8a8d91]">
+    <div class="flex flex-wrap gap-2 sm:gap-[10px] justify-center md:justify-start">
+      <a class="hover:underline whitespace-nowrap" href="#">Tiếng Việt</a>
+      <a class="hover:underline whitespace-nowrap" href="#">English (UK)</a>
+      <a class="hover:underline whitespace-nowrap" href="#">中文(台灣)</a>
+      <a class="hover:underline whitespace-nowrap" href="#">한국어</a>
+      <a class="hover:underline whitespace-nowrap" href="#">日本語</a>
+      <a class="hover:underline whitespace-nowrap" href="#">Français (France)</a>
+      <a class="hover:underline whitespace-nowrap" href="#">ภาษาไทย</a>
+      <a class="hover:underline whitespace-nowrap" href="#">Español</a>
+      <a class="hover:underline whitespace-nowrap" href="#">Português (Brasil)</a>
+      <a class="hover:underline whitespace-nowrap" href="#">Deutsch</a>
+      <a class="hover:underline whitespace-nowrap" href="#">Italiano</a>
+      <button class="border border-[#ccd0d5] bg-[#f5f6f7] px-2 rounded-sm cursor-pointer hover:bg-[#ebedf0]">+</button>
+    </div>
 
-        <div class="footer__info-links">
-            <a href="#">Đăng ký</a>
-            <a href="#">Đăng nhập</a>
-            <a href="#">Messenger</a>
-            <a href="#">Facebook Lite</a>
-            <a href="#">Video</a>
-            <a href="#">Meta Pay</a>
-            <a href="#">Cửa hàng trên Meta</a>
-            <a href="#">Meta Quest</a>
-            <a href="#">Ray-Ban Meta</a>
-            <a href="#">Meta AI</a>
-            <a href="#">Nội dung khác do Meta AI tạo</a>
-            <a href="#">Instagram</a>
-            <a href="#">Threads</a>
-            <a href="#">Trung tâm thông tin bỏ phiếu</a>
-            <a href="#">Chính sách quyền riêng tư</a>
-            <a href="#">Trung tâm quyền riêng tư</a>
-            <a href="#">Giới thiệu</a>
-            <a href="#">Tạo quảng cáo</a>
-            <a href="#">Tạo Trang</a>
-            <a href="#">Nhà phát triển</a>
-            <a href="#">Tuyển dụng</a>
-            <a href="#">Cookie</a>
-            <a href="#">Lựa chọn quảng cáo</a>
-            <a href="#">Điều khoản</a>
-            <a href="#">Trợ giúp</a>
-            <a href="#">Tải thông tin liên hệ lên & đối tượng không phải người dùng</a>
-        </div>
+    <div class="text-[#737373] border-b border-[#dddfe2] text-[1px] h-2 my-2"></div>
 
-        <div class="footer__copyright">
-            Meta © 2025
-        </div>
-    </footer>
+    <div class="flex flex-wrap gap-2 sm:gap-[10px] justify-center md:justify-start">
+      <a class="hover:underline whitespace-nowrap" href="#">Đăng ký</a>
+      <a class="hover:underline whitespace-nowrap" href="#">Đăng nhập</a>
+      <a class="hover:underline whitespace-nowrap" href="#">Messenger</a>
+      <a class="hover:underline whitespace-nowrap" href="#">Facebook Lite</a>
+      <a class="hover:underline whitespace-nowrap" href="#">Video</a>
+      <a class="hover:underline whitespace-nowrap" href="#">Meta Pay</a>
+      <a class="hover:underline whitespace-nowrap" href="#">Cửa hàng trên Meta</a>
+      <a class="hover:underline whitespace-nowrap" href="#">Meta Quest</a>
+      <a class="hover:underline whitespace-nowrap" href="#">Ray-Ban Meta</a>
+      <a class="hover:underline whitespace-nowrap" href="#">Meta AI</a>
+      <a class="hover:underline whitespace-nowrap" href="#">Nội dung khác do Meta AI tạo</a>
+      <a class="hover:underline whitespace-nowrap" href="#">Instagram</a>
+      <a class="hover:underline whitespace-nowrap" href="#">Threads</a>
+      <a class="hover:underline whitespace-nowrap" href="#">Trung tâm thông tin bỏ phiếu</a>
+      <a class="hover:underline whitespace-nowrap" href="#">Chính sách quyền riêng tư</a>
+      <a class="hover:underline whitespace-nowrap" href="#">Trung tâm quyền riêng tư</a>
+      <a class="hover:underline whitespace-nowrap" href="#">Giới thiệu</a>
+      <a class="hover:underline whitespace-nowrap" href="#">Tạo quảng cáo</a>
+      <a class="hover:underline whitespace-nowrap" href="#">Tạo Trang</a>
+      <a class="hover:underline whitespace-nowrap" href="#">Nhà phát triển</a>
+      <a class="hover:underline whitespace-nowrap" href="#">Tuyển dụng</a>
+      <a class="hover:underline whitespace-nowrap" href="#">Cookie</a>
+      <a class="hover:underline whitespace-nowrap" href="#">Lựa chọn quảng cáo</a>
+      <a class="hover:underline whitespace-nowrap" href="#">Điều khoản</a>
+      <a class="hover:underline whitespace-nowrap" href="#">Trợ giúp</a>
+      <a class="hover:underline whitespace-nowrap" href="#">Tải thông tin liên hệ lên & đối tượng không phải người dùng</a>
+    </div>
 
+    <div class="mt-4 text-[11px] text-center md:text-left">
+      Meta © 2025
+    </div>
+  </footer>
 </body>
 </html>
